@@ -21,11 +21,7 @@ public class conEx7 {
 
         while(vowels.indexOf(firstv) == -1){
 
-
-            firstv = word.substring(i,i +1);
-
-
-            if (i == word.length())
+        	if (i == word.length())
             {
                 if(word.indexOf("y") == -1){
                 firstv = "There are no vowels in " + word + ". That's not a word.";
@@ -36,6 +32,10 @@ public class conEx7 {
 
 
             }
+            firstv = word.substring(i,i +1);
+
+
+            
 
             i++;
 
