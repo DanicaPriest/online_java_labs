@@ -1,4 +1,4 @@
-public class Race {
+class Race {
     double miles;
     String terrain;
     String medal;
@@ -9,10 +9,32 @@ public class Race {
         medal = md;
     }
 
+    public double getMiles() {
+        return miles;
+    }
 
+    public void setMiles(double miles) {
+        this.miles = miles;
+    }
+
+    public String getTerrain() {
+        return terrain;
+    }
+
+    public void setTerrain(String terrain) {
+        this.terrain = terrain;
+    }
+
+    public String getMedal() {
+        return medal;
+    }
+
+    public void setMedal(String medal) {
+        this.medal = medal;
+    }
 }
 
-public class Race_metric {
+class Race_metric {
     double kilometers;
     String terrain;
     String medal;
@@ -26,16 +48,26 @@ public class Race_metric {
 
 }
 
-public class Pace {
-    public double km_to_mile(double km) {
+class Pace {
+    public static double km_to_mile(double km) {
         return km * 0.621371;
     }
 
-    public double miles_to_km(double miles) {
+    public static double miles_to_km(double miles) {
         return miles * 1.609344;
     }
-    double a = miles_to_km(10);
- System.out.println(a);
+
+    public static void main(String[] args) {
+        double a = miles_to_km(10);
+        System.out.println(a);
+        Race mcm = new Race(26.2, "road", "blue");
+        mcm.setMedal("red");
+        String s = mcm.getTerrain(); 
+
+    }
+
+
+}
 /**
  * Objects, Classes and Methods Exercise 3:
  * <p>
